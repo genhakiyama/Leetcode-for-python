@@ -40,15 +40,16 @@ class Solution :
             else :
                 current.next = list2
                 list2 = list2.next
+            current = current.next
 
-        current.next = list1 if list1 else list2 
+        current.next = list1 if list1 else list2
 
-        return head
+        return head.next
 
 raw_input_1 = input()
 raw_input_2 = input()
-list1 = list(map(int , raw_input_1.split()))
-list2 = list(map(int , raw_input_2.split()))
+list1 = list(map(int , raw_input_1.split())) if raw_input_1.strip() else [] 
+list2 = list(map(int , raw_input_2.split())) if raw_input_2.strip() else []
 head1 = create_linked_list(list1)
 head2 = create_linked_list(list2)
 
