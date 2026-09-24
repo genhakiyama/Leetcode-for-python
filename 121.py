@@ -1,4 +1,6 @@
 import math
+import ast
+import json 
 
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
@@ -18,7 +20,9 @@ class Solution:
         return ans 
 
 user_input = input()
-arr = [int(x) for x in user_input.strip("[]").split(",") if x.strip()]
+# arr = [int(x) for x in user_input.strip("[]").split(",") if x.strip()]
+# arr = ast.literal_eval(user_input)
+# arr = json.loads(user_input)
 
-print(arr)
-print(Solution().maxProfit(arr))
+# print(arr)
+# print(Solution().maxProfit(arr))
